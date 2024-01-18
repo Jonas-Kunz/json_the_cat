@@ -1,11 +1,12 @@
-const breedFetcher = require("./breedFetcher");
-let breedName = process.argv.slice(2, 3).join();
+const {breedFetcher} = require("./breedFetcher");
+//let breedName = process.argv.slice(2, 3).join();
 
 breedFetcher(breedName, (error, desc, status) => {
-  console.log("Status: ", status);
   if (error) {
-    console.log("error fetch details: ", error);
+    return error;
   } else {
-    console.log(desc);
+    return desc;
   }
 });
+
+module.exports = {breedFetcher}

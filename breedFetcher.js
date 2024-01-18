@@ -27,4 +27,4 @@ const breedFetcher = function(breedName, callback) {
   );
 };
 
-module.exports = breedFetcher;
+module.exports = {breedFetcher};
